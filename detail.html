@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crimson Lotus Chronicle — AnixMiru</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<style>.tab-panel{display:none;} .tab-panel.shown{display:block;}</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="brand">
+      <svg viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="rg1" x1="0" y1="0" x2="120" y2="80" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#e21e9c"/><stop offset="30%" stop-color="#7b1fa2"/><stop offset="62%" stop-color="#ff6a1a"/><stop offset="100%" stop-color="#ffb62b"/>
+        </linearGradient></defs>
+        <path d="M10 78C4 84 6 92 14 92C22 92 34 82 40 68L58 22L76 68C80 78 90 84 98 78" stroke="url(#rg1)" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M40 68C48 50 66 40 78 52C90 64 78 78 66 70L40 46" stroke="url(#rg1)" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div class="name">Anix<span class="mi">Miru</span></div>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="browse.html">Browse</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="detail.html" aria-current="page">Anime</a>
+    </div>
+    <form class="nav-search" data-search>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+      <input type="text" placeholder="Search anime, movies...">
+    </form>
+    <div class="nav-actions">
+      <a class="icon-btn" href="login.html" aria-label="Sign in">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21a8 8 0 10-16 0"/><circle cx="12" cy="8" r="4"/></svg>
+      </a>
+      <a class="cta" href="login.html">Sign in</a>
+      <button class="menu-toggle" aria-label="Menu">☰</button>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="page-header" style="padding-bottom:0;">
+    <div class="crumbs"><a href="index.html">Home</a><span class="sep">/</span><a href="browse.html">Browse</a><span class="sep">/</span><span class="current">Crimson Lotus Chronicle</span></div>
+  </div>
+
+  <section class="detail-hero" style="padding-top:6px;">
+    <div class="detail-hero-inner">
+      <div class="poster-lg" style="--c1:#e21e9c; --c2:#4a1163;">紅蓮</div>
+      <div class="detail-meta">
+        <div class="badges">
+          <span class="badge gold">★ 8.9</span>
+          <span class="badge">TV · 24 Episodes</span>
+          <span class="badge">Airing</span>
+          <span class="badge">Sub &amp; Dub</span>
+        </div>
+        <h1>Crimson Lotus Chronicle</h1>
+        <div class="stats-row">
+          <span>Studio: <b>Kurenai Animation</b></span>
+          <span>Aired: <b>Jan 2026 – present</b></span>
+          <span>Genres: <b>Action, Fantasy, Drama</b></span>
+        </div>
+        <p class="synopsis">When the sealed gates beneath the capital crack open, a reluctant swordswoman must reclaim a blade that chooses its own wielder — and reckon with the lotus-marked prophecy tied to her family's ruin. Each battle peels back another layer of a war three generations in the making.</p>
+        <div class="actions">
+          <a class="btn-primary" href="watch.html">▶ Watch episode 24</a>
+          <button class="btn-ghost">+ Add to list</button>
+          <button class="btn-ghost">Share</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="tabs">
+    <div class="tab active" data-target="#panel-episodes">Episodes</div>
+    <div class="tab" data-target="#panel-about">About</div>
+    <div class="tab" data-target="#panel-related">Related</div>
+  </div>
+
+  <div id="panel-episodes" class="tab-panel shown">
+    <div class="ep-list">
+      <a href="watch.html" style="color:inherit;"><div class="ep-row"><div class="num">24</div><div class="body"><div class="t">The Lotus Unfurls</div><div class="d">The final seal breaks as two bloodlines collide.</div></div><div class="len">24 min</div><div class="play">▶</div></div></a>
+      <a href="watch.html" style="color:inherit;"><div class="ep-row"><div class="num">23</div><div class="body"><div class="t">Ashes of the Vow</div><div class="d">A promise made in blood comes due.</div></div><div class="len">23 min</div><div class="play">▶</div></div></a>
+      <a href="watch.html" style="color:inherit;"><div class="ep-row"><div class="num">22</div><div class="body"><div class="t">The Hollow Crown</div><div class="d">The capital's true ruler is finally revealed.</div></div><div class="len">24 min</div><div class="play">▶</div></div></a>
+      <a href="watch.html" style="color:inherit;"><div class="ep-row"><div class="num">21</div><div class="body"><div class="t">Where Petals Fall</div><div class="d">A quiet episode before the storm.</div></div><div class="len">22 min</div><div class="play">▶</div></div></a>
+      <a href="watch.html" style="color:inherit;"><div class="ep-row"><div class="num">20</div><div class="body"><div class="t">Blade of Two Names</div><div class="d">The sword's second wielder awakens.</div></div><div class="len">24 min</div><div class="play">▶</div></div></a>
+      <a href="watch.html" style="color:inherit;"><div class="ep-row"><div class="num">19</div><div class="body"><div class="t">Gatebreaker</div><div class="d">The sealed gate opens for the first time in centuries.</div></div><div class="len">25 min</div><div class="play">▶</div></div></a>
+    </div>
+  </div>
+
+  <div id="panel-about" class="tab-panel">
+    <div class="ep-list" style="max-width:820px;">
+      <p style="color:var(--muted); font-size:14.5px; line-height:1.75;">Crimson Lotus Chronicle began as a serialized novel before its 2026 television adaptation. It's known for its hand-inked battle sequences, morally tangled cast, and a slow-burn mystery around the lotus prophecy that ties every major character's fate together. Fans often recommend pairing it with a rewatch of the season one flashback arc before diving into the current story.</p>
+    </div>
+  </div>
+
+  <div id="panel-related" class="tab-panel">
+    <div class="grid cols-4" style="padding-left:32px; padding-right:32px; margin-top:6px;">
+      <a class="card-link" href="detail.html"><div class="card" style="--c1:#ff6a1a; --c2:#7b1fa2"><div class="art"></div><div class="glyph">星霧</div><div class="shade"></div><div class="info"><div class="t">Starfall Academy</div><div class="m">Isekai · Comedy</div></div></div></a>
+      <a class="card-link" href="detail.html"><div class="card" style="--c1:#e21e9c; --c2:#ff6a1a"><div class="art"></div><div class="glyph">竜牙</div><div class="shade"></div><div class="info"><div class="t">Dragonfang Reverie</div><div class="m">Shonen · Action</div></div></div></a>
+      <a class="card-link" href="detail.html"><div class="card" style="--c1:#e21e9c; --c2:#7b1fa2"><div class="art"></div><div class="glyph">深淵</div><div class="shade"></div><div class="info"><div class="t">Abyssal Choir</div><div class="m">Horror · Fantasy</div></div></div></a>
+      <a class="card-link" href="detail.html"><div class="card" style="--c1:#ffb62b; --c2:#e21e9c"><div class="art"></div><div class="glyph">影刃</div><div class="shade"></div><div class="info"><div class="t">Shadow Blade Requiem</div><div class="m">Action · Drama</div></div></div></a>
+    </div>
+  </div>
+
+  <div class="band">
+    <div><h2>Keep the story going.</h2><p>Sign in to sync your watch progress and get notified the moment episode 25 lands.</p></div>
+    <a class="btn-primary" href="login.html">Create free account</a>
+  </div>
+</main>
+
+<footer>
+  <div class="foot-grid">
+    <div>
+      <div class="brand"><div class="name">Anix<span class="mi">Miru</span></div></div>
+      <p class="desc">A fan-made streaming hub for anime lovers — trending series, weekly simulcasts, and a schedule that keeps you on time.</p>
+    </div>
+    <div class="foot-col"><h5>Browse</h5><a href="browse.html">All anime</a><a href="browse.html">New uploads</a><a href="schedule.html">Schedule</a></div>
+    <div class="foot-col"><h5>Company</h5><a href="#">About</a><a href="#">Contact</a><a href="#">DMCA</a></div>
+    <div class="foot-col"><h5>Account</h5><a href="login.html">Sign in</a><a href="signup.html">Create account</a></div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 AnixMiru. Fan project — not affiliated with any studio.</span>
+    <span>Made for anime nights.</span>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+<script>
+  // ensure the shown class matches active tab on load / toggle
+  document.querySelectorAll('.tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('shown'));
+      const target = document.querySelector(tab.getAttribute('data-target'));
+      if (target) target.classList.add('shown');
+    });
+  });
+</script>
+</body>
+</html>

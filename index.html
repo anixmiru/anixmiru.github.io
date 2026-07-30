@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AnixMiru — Watch Anime Free</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  .hero{
+    position:relative; z-index:1;
+    padding:76px 32px 40px;
+    max-width:1240px; margin:0 auto;
+    display:grid; grid-template-columns: 1.05fr 0.95fr; gap:40px; align-items:center;
+  }
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size:12.5px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase;
+    color:var(--gold); margin-bottom:18px;
+  }
+  .eyebrow::before{content:""; width:7px; height:7px; border-radius:50%; background:var(--gold); box-shadow:0 0 10px var(--gold);}
+  .hero h1{font-size:clamp(42px, 6vw, 72px); line-height:0.98; margin-bottom:20px;}
+  .hero h1 .grad{background:var(--ribbon); -webkit-background-clip:text; background-clip:text; color:transparent;}
+  .hero p{font-size:16.5px; color:var(--muted); max-width:480px; line-height:1.65; margin-bottom:30px;}
+  .hero-actions{display:flex; gap:14px; align-items:center; flex-wrap:wrap;}
+  .hero-stats{display:flex; gap:34px; margin-top:38px; flex-wrap:wrap;}
+  .hero-stats div b{display:block; font-family:'Anton'; font-size:26px;}
+  .hero-stats div span{font-size:12.5px; color:var(--muted); text-transform:uppercase; letter-spacing:0.06em;}
+  .hero-visual{position:relative; display:flex; justify-content:center; align-items:center;}
+  .hero-visual svg{width:100%; max-width:480px; filter:drop-shadow(0 20px 60px rgba(226,30,156,0.35));}
+  .ribbon-path{stroke-dasharray:1400; stroke-dashoffset:1400; animation:draw 2.4s ease forwards .3s;}
+  @keyframes draw{to{stroke-dashoffset:0;}}
+  .hero-visual .float-badge{
+    position:absolute; padding:10px 16px; border-radius:12px;
+    background:rgba(28,17,41,0.85); border:1px solid var(--line); backdrop-filter:blur(8px);
+    font-size:12.5px; font-weight:700; display:flex; align-items:center; gap:8px;
+    animation:bob 4s ease-in-out infinite;
+  }
+  .float-badge.b1{top:6%; left:-4%; animation-delay:0s;}
+  .float-badge.b2{bottom:10%; right:-6%; animation-delay:1.2s;}
+  @keyframes bob{0%,100%{transform:translateY(0);} 50%{transform:translateY(-10px);}}
+  .dot{width:8px; height:8px; border-radius:50%; background:var(--gold);}
+  @media (max-width:980px){ .hero{grid-template-columns:1fr; padding-top:48px;} .hero-visual{order:-1;} }
+  @media (max-width:560px){ .hero-stats{row-gap:16px;} }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="brand">
+      <svg viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="rg1" x1="0" y1="0" x2="120" y2="80" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#e21e9c"/><stop offset="30%" stop-color="#7b1fa2"/>
+            <stop offset="62%" stop-color="#ff6a1a"/><stop offset="100%" stop-color="#ffb62b"/>
+          </linearGradient>
+        </defs>
+        <path d="M10 78C4 84 6 92 14 92C22 92 34 82 40 68L58 22L76 68C80 78 90 84 98 78" stroke="url(#rg1)" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M40 68C48 50 66 40 78 52C90 64 78 78 66 70L40 46" stroke="url(#rg1)" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div class="name">Anix<span class="mi">Miru</span></div>
+    </div>
+    <div class="nav-links">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="browse.html">Browse</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="detail.html">Anime</a>
+    </div>
+    <form class="nav-search" data-search>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+      <input type="text" placeholder="Search anime, movies...">
+    </form>
+    <div class="nav-actions">
+      <a class="icon-btn" href="login.html" aria-label="Sign in">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21a8 8 0 10-16 0"/><circle cx="12" cy="8" r="4"/></svg>
+      </a>
+      <a class="cta" href="login.html">Sign in</a>
+      <button class="menu-toggle" aria-label="Menu">☰</button>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div>
+      <div class="eyebrow">New episode simulcast · Every week</div>
+      <h1>Your next<br><span class="grad">obsession</span><br>is streaming.</h1>
+      <p>Thousands of subbed and dubbed episodes, updated the moment they air. No detours, no clutter — just the next episode, one tap away.</p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="browse.html">▶ Start watching</a>
+        <a class="btn-ghost" href="schedule.html">View schedule</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>12,400+</b><span>Titles</span></div>
+        <div><b>98K</b><span>Episodes</span></div>
+        <div><b>Daily</b><span>New uploads</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <svg viewBox="0 0 400 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="rg2" x1="0" y1="0" x2="400" y2="200" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#e21e9c"/><stop offset="28%" stop-color="#7b1fa2"/>
+            <stop offset="60%" stop-color="#ff6a1a"/><stop offset="100%" stop-color="#ffb62b"/>
+          </linearGradient>
+        </defs>
+        <path class="ribbon-path" d="M20 230C6 245 12 260 28 258C46 256 78 226 96 182L150 40L204 182C216 214 244 230 268 214C292 198 276 168 248 178L150 220" stroke="url(#rg2)" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+        <path class="ribbon-path" d="M215 230C201 245 207 260 223 258C241 256 273 226 291 182L345 40L399 182" stroke="url(#rg2)" stroke-width="26" stroke-linecap="round" stroke-linejoin="round" style="animation-delay:.9s"/>
+      </svg>
+      <div class="float-badge b1"><span class="dot"></span>Ep 12 just dropped</div>
+      <div class="float-badge b2"><span class="dot" style="background:var(--magenta)"></span>1080p · Dual audio</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="pills">
+      <span class="pill active">All</span>
+      <span class="pill">Action</span>
+      <span class="pill">Isekai</span>
+      <span class="pill">Romance</span>
+      <span class="pill">Shonen</span>
+      <span class="pill">Slice of Life</span>
+      <span class="pill">Fantasy</span>
+      <span class="pill">Horror</span>
+      <span class="pill">Sports</span>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <div><h2>Trending now</h2><div class="sub">What everyone's watching this week</div></div>
+      <a class="see-all" href="browse.html">See all →</a>
+    </div>
+    <div class="grid">
+      <a class="card-link" href="detail.html"><div class="card" style="--c1:#e21e9c; --c2:#4a1163"><div class="art"></div><span class="ep">EP 24</span><span class="rating">★ 8.9</span><div class="glyph">紅蓮</div><div class="shade"></div><div class="info"><div class="t">Crimson Lotus Chronicle</div><div class="m">Action · Fantasy</div></div></div></a>
+      <a class="card-link" href="detail.html"><div class="card" style="--c1:#ff6a1a; --c2:#7b1fa2"><div class="art"></div><span class="ep">EP 08</span><span class="rating">★ 9.2</span><div class="glyph">星霧</div><div class="shade"></div><div class="info"><div class="t">Starfall Academy</div><div class="m">Isekai · Comedy</div></div></div></a>
+      <a class="card-link" href="detail.html"><div class="card" style="--c1:#ffb62b; --c2:#e21e9c"><div class="art"></div><span class="ep">EP 15</span><span class="rating">★ 8.4</span><div class="glyph">影刃</div><div class="shade"></div><div class="info"><div class="t">Shadow Blade Requiem</div><div class="m">Action · Drama</div></div></div></a>
+      <a class="card-link" href="detail.html"><div class="card" style="--c1:#7b1fa2; --c2:#1c1129"><div class="art"></div><span class="ep">EP 03</span><span class="rating">★ 8.1</span><div class="glyph">海鳴</div><div class="shade"></div><div class="info"><div class="t">Tideborn Melodies</div><div class="m">Slice of Life</div></div></div></a>
+      <a class="card-link" href="detail.html"><div class="card" style="--c1:#e21e9c; --c2:#ff6a1a"><div class="art"></div><span class="ep">EP 19</span><span class="rating">★ 9.0</span><div class="glyph">竜牙</div><div class="shade"></div><div class="info"><div class="t">Dragonfang Reverie</div><div class="m">Shonen · Action</div></div></div></a>
+      <a class="card-link" href="detail.html"><div class="card" style="--c1:#ff6a1a; --c2:#ffb62b"><div class="art"></div><span class="ep">EP 11</span><span class="rating">★ 8.7</span><div class="glyph">桜霊</div><div class="shade"></div><div class="info"><div class="t">Sakura Spirit Diaries</div><div class="m">Romance · Fantasy</div></div></div></a>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <div><h2>Fresh uploads</h2><div class="sub">Added in the last 48 hours</div></div>
+      <a class="see-all" href="browse.html">See all →</a>
+    </div>
+    <div class="grid">
+      <a class="card-link" href="detail.html"><div class="card" style="--c1:#4a1163; --c2:#e21e9c"><div class="art"></div><span class="ep">MOVIE</span><span class="rating">★ 8.8</span><div class="glyph">月狼</div><div class="shade"></div><div class="info"><div class="t">The Wolf of Twin Moons</div><div class="m">Action · Fantasy</div></div></div></a>
+      <a class="card-link" href="detail.html"><div class="card" style="--c1:#ffb62b; --c2:#7b1fa2"><div class="art"></div><span class="ep">EP 01</span><span class="rating">NEW</span><div class="glyph">灯火</div><div class="shade"></div><div class="info"><div class="t">Lantern Hearts</div><div class="m">Slice of Life</div></div></div></a>
+      <a class="card-link" href="detail.html"><div class="card" style="--c1:#e21e9c; --c2:#180a24"><div class="art"></div><span class="ep">EP 06</span><span class="rating">★ 8.3</span><div class="glyph">鋼翼</div><div class="shade"></div><div class="info"><div class="t">Steelwing Odyssey</div><div class="m">Sci-Fi · Action</div></div></div></a>
+      <a class="card-link" href="detail.html"><div class="card" style="--c1:#ff6a1a; --c2:#e21e9c"><div class="art"></div><span class="ep">EP 20</span><span class="rating">★ 9.1</span><div class="glyph">霧刻</div><div class="shade"></div><div class="info"><div class="t">Mistcarver Legacy</div><div class="m">Horror · Mystery</div></div></div></a>
+      <a class="card-link" href="detail.html"><div class="card" style="--c1:#7b1fa2; --c2:#ff6a1a"><div class="art"></div><span class="ep">EP 04</span><span class="rating">★ 7.9</span><div class="glyph">球魂</div><div class="shade"></div><div class="info"><div class="t">Full Court Spirit</div><div class="m">Sports</div></div></div></a>
+      <a class="card-link" href="detail.html"><div class="card" style="--c1:#ffb62b; --c2:#e21e9c"><div class="art"></div><span class="ep">EP 13</span><span class="rating">★ 8.6</span><div class="glyph">花刀</div><div class="shade"></div><div class="info"><div class="t">Blossom Blade Saga</div><div class="m">Romance · Action</div></div></div></a>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <div><h2>Release schedule</h2><div class="sub">New episodes, day by day</div></div>
+      <a class="see-all" href="schedule.html">Full schedule →</a>
+    </div>
+    <div class="schedule">
+      <div class="day-col"><h4>MON</h4><div class="slot"><span class="time">18:00</span><span class="title">Starfall Academy</span></div><div class="slot"><span class="time">20:30</span><span class="title">Full Court Spirit</span></div></div>
+      <div class="day-col"><h4>TUE</h4><div class="slot"><span class="time">17:30</span><span class="title">Tideborn Melodies</span></div></div>
+      <div class="day-col today"><h4>WED · today</h4><div class="slot"><span class="time">19:00</span><span class="title">Crimson Lotus Chronicle</span></div><div class="slot"><span class="time">21:00</span><span class="title">Mistcarver Legacy</span></div></div>
+      <div class="day-col"><h4>THU</h4><div class="slot"><span class="time">18:45</span><span class="title">Dragonfang Reverie</span></div></div>
+      <div class="day-col"><h4>FRI</h4><div class="slot"><span class="time">19:30</span><span class="title">Sakura Spirit Diaries</span></div><div class="slot"><span class="time">22:00</span><span class="title">Steelwing Odyssey</span></div></div>
+      <div class="day-col"><h4>SAT</h4><div class="slot"><span class="time">12:00</span><span class="title">Lantern Hearts</span></div></div>
+      <div class="day-col"><h4>SUN</h4><div class="slot"><span class="time">16:00</span><span class="title">Blossom Blade Saga</span></div></div>
+    </div>
+  </section>
+
+  <div class="band">
+    <div>
+      <h2>Never miss a drop.</h2>
+      <p>Get a ping the moment a new episode of your list goes live — subbed, dubbed, or both.</p>
+    </div>
+    <a class="btn-primary" href="login.html">Create free account</a>
+  </div>
+</main>
+
+<footer>
+  <div class="foot-grid">
+    <div>
+      <div class="brand">
+        <svg viewBox="0 0 120 100" width="34" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 78C4 84 6 92 14 92C22 92 34 82 40 68L58 22L76 68C80 78 90 84 98 78" stroke="url(#rg1)" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M40 68C48 50 66 40 78 52C90 64 78 78 66 70L40 46" stroke="url(#rg1)" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="name">Anix<span class="mi">Miru</span></div>
+      </div>
+      <p class="desc">A fan-made streaming hub for anime lovers — trending series, weekly simulcasts, and a schedule that keeps you on time.</p>
+    </div>
+    <div class="foot-col"><h5>Browse</h5><a href="browse.html">All anime</a><a href="browse.html">New uploads</a><a href="schedule.html">Schedule</a></div>
+    <div class="foot-col"><h5>Company</h5><a href="#">About</a><a href="#">Contact</a><a href="#">DMCA</a></div>
+    <div class="foot-col"><h5>Account</h5><a href="login.html">Sign in</a><a href="signup.html">Create account</a></div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 AnixMiru. Fan project — not affiliated with any studio.</span>
+    <span>Made for anime nights.</span>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
