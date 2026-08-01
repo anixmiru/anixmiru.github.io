@@ -1,0 +1,36 @@
+[
+  {
+    "id": 1,
+    "title": "Attack on Titan",
+    "description": "Humanity lives behind walls to protect themselves from Titans.",
+    "genre": ["Action", "Drama", "Fantasy"],
+    "image": "https://via.placeholder.com/300x400?text=Attack+on+Titan",
+    "episodes": [
+      {
+        "number": 1,
+        "title": "To You, in 2000 Years",
+        "watchLinks": {
+          "crunchyroll": "https://www.crunchyroll.com/",
+          "other": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "My Hero Academia",
+    "description": "A boy born without powers in a world of superheroes dreams of becoming one anyway.",
+    "genre": ["Action", "Comedy", "Superhero"],
+    "image": "https://via.placeholder.com/300x400?text=My+Hero+Academia",
+    "episodes": [
+      {
+        "number": 1,
+        "title": "Izuku Midoriya: Origin",
+        "watchLinks": {
+          "crunchyroll": "https://www.crunchyroll.com/",
+          "other": ""
+        }
+      }
+    ]
+  }
+]

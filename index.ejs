@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <%- include('partials/header') %>
+
+  <main class="container">
+    <h1 class="page-title">Welcome to AnimeHub</h1>
+
+    <form action="/search" method="GET" class="search-form">
+      <input type="text" name="q" placeholder="Search anime..." value="<%= searchQuery || '' %>">
+      <button type="submit">Search</button>
+    </form>
+
+    <% if (searchQuery) { %>
+      <p class="search-results-label">Results for "<%= searchQuery %>"</p>
+    <% } else { %>
+      <section class="featured-section">
+        <h2>Featured Anime</h2>
+        <div class="anime-grid">
+          <% featured.forEach(a => { %>
+            <a href="/anime/<%= a.id %>" class="anime-card">
+              <img src="<%= a.image %>" alt="<%= a.title %>">
+              <h3><%= a.title %></h3>
+              <p><%= a.genre.join(', ') %></p>
+            </a>
+          <% }) %>
+        </div>
+      </section>
+    <% } %>
+
+    <section class="all-anime">
+      <h2><%= searchQuery ? 'Matching Titles' : 'All Anime' %></h2>
+      <% if (anime.length === 0) { %>
+        <p class="empty-state">No anime found.</p>
+      <% } %>
+      <div class="anime-grid">
+        <% anime.forEach(a => { %>
+          <a href="/anime/<%= a.id %>" class="anime-card">
+            <img src="<%= a.image %>" alt="<%= a.title %>">
+            <h3><%= a.title %></h3>
+            <p><%= a.genre.join(', ') %></p>
+          </a>
+        <% }) %>
+      </div>
+    </section>
+  </main>
+
+  <%- include('partials/footer') %>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <%- include('partials/header') %>
+
+  <main class="container">
+    <div class="anime-detail">
+      <img src="<%= anime.image %>" alt="<%= anime.title %>" class="anime-poster">
+      <div class="anime-info">
+        <h1><%= anime.title %></h1>
+        <p><%= anime.description %></p>
+        <p><strong>Genre:</strong> <%= anime.genre.join(', ') %></p>
+        <p><strong>Episodes:</strong> <%= anime.episodes.length %></p>
+      </div>
+    </div>
+
+    <section class="episodes-list">
+      <h2>Episodes</h2>
+      <% if (anime.episodes.length === 0) { %>
+        <p class="empty-state">No episodes added yet.</p>
+      <% } %>
+      <ul>
+        <% anime.episodes.forEach(ep => { %>
+          <li>
+            <a href="/episode/<%= anime.id %>/<%= ep.number %>">
+              Episode <%= ep.number %> - <%= ep.title %>
+            </a>
+          </li>
+        <% }) %>
+      </ul>
+    </section>
+  </main>
+
+  <%- include('partials/footer') %>
+</body>
+</html>

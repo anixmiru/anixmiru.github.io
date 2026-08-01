@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <%- include('partials/header') %>
+
+  <main class="container">
+    <div class="episode-detail">
+      <h1><%= anime.title %> - <%= episode.title %></h1>
+      <p class="episode-sub">Episode <%= episode.number %></p>
+
+      <div class="watch-options">
+        <h2>Watch Officially</h2>
+        <div class="quality-links">
+          <% if (episode.watchLinks && episode.watchLinks.crunchyroll) { %>
+            <a href="<%= episode.watchLinks.crunchyroll %>" target="_blank" rel="noopener" class="watch-btn">Watch on Crunchyroll</a>
+          <% } %>
+          <% if (episode.watchLinks && episode.watchLinks.other) { %>
+            <a href="<%= episode.watchLinks.other %>" target="_blank" rel="noopener" class="watch-btn">Other Official Source</a>
+          <% } %>
+          <% if (!episode.watchLinks || (!episode.watchLinks.crunchyroll && !episode.watchLinks.other)) { %>
+            <p class="empty-state">No official links added yet for this episode.</p>
+          <% } %>
+        </div>
+      </div>
+
+      <a href="/anime/<%= anime.id %>" class="back-link">&larr; Back to <%= anime.title %></a>
+    </div>
+  </main>
+
+  <%- include('partials/footer') %>
+</body>
+</html>

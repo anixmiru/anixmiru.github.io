@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <%- include('partials/header') %>
+
+  <main class="container">
+    <h1 class="page-title">Browse Anime</h1>
+
+    <div class="filter-bar">
+      <a href="/browse" class="filter-chip <%= activeGenre === '' ? 'active' : '' %>">All</a>
+      <% genres.forEach(g => { %>
+        <a href="/browse?genre=<%= encodeURIComponent(g) %>" class="filter-chip <%= activeGenre === g ? 'active' : '' %>"><%= g %></a>
+      <% }) %>
+    </div>
+
+    <% if (anime.length === 0) { %>
+      <p class="empty-state">No anime in this genre yet.</p>
+    <% } %>
+
+    <div class="anime-grid">
+      <% anime.forEach(a => { %>
+        <a href="/anime/<%= a.id %>" class="anime-card">
+          <img src="<%= a.image %>" alt="<%= a.title %>">
+          <h3><%= a.title %></h3>
+          <p><%= a.genre.join(', ') %></p>
+        </a>
+      <% }) %>
+    </div>
+  </main>
+
+  <%- include('partials/footer') %>
+</body>
+</html>
